@@ -6,27 +6,28 @@
  */
 
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {SCREEN_WIDTH} from './src/assets/dimensions';
+import {SafeAreaView, StyleSheet} from 'react-native';
+import HomeScreen from './src/screens/HomeScreen/HomeScreen';
 
 function App(): React.JSX.Element {
   return (
-    <View style={styles.root}>
-      <Text style={{color: 'white'}}>{'AMAZON-CLONE'}</Text>
-    </View>
+    <SafeAreaView style={styles.root}>
+      <HomeScreen />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    width: SCREEN_WIDTH,
     alignItems: 'center',
     justifyContent: 'center',
 
     // borderWidth: 1,
     // borderColor: 'red',
   },
+
+  txt: {color: 'white'},
 });
 
 export default App;
